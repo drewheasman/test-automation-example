@@ -8,8 +8,8 @@ import org.drewheasman.test.rest.common.step.RestStepState;
 import org.drewheasman.test.rest.reqres.pojo.reqres.resource.UnknownResource;
 import org.drewheasman.test.rest.reqres.pojo.reqres.resource.UnknownResourcePost;
 import org.drewheasman.test.rest.reqres.pojo.reqres.resource.UnknownResourceUpdatedResponse;
+import org.drewheasman.test.rest.reqres.request.ReqresResponseHelper;
 import org.drewheasman.test.rest.reqres.request.resource.ResourceRequest;
-import org.drewheasman.test.rest.reqres.response.ReqresResponseHelper;
 
 import java.util.List;
 

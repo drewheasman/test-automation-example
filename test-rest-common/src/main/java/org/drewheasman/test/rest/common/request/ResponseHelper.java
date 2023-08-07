@@ -1,26 +1,26 @@
-package org.drewheasman.test.rest.common.response;
+package org.drewheasman.test.rest.common.request;
 
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.response.Response;
-import org.drewheasman.test.rest.common.pojo.api.Data;
-import org.drewheasman.test.rest.common.pojo.api.DataList;
+import org.drewheasman.test.rest.common.pojo.api.GenericData;
+import org.drewheasman.test.rest.common.pojo.api.GenericDataList;
 
 import java.lang.reflect.Type;
 import java.util.List;
 
 public interface ResponseHelper {
     static <T> T getDataAs(Response response, Class<T> clazz) {
-        Data<T> data = response.as(getDataTypeRef(Data.class, clazz));
+        GenericData<T> data = response.as(getDataTypeRef(GenericData.class, clazz));
         return data.getData();
     }
 
     static <T> List<T> getDataArrayAs(Response response, Class<T> clazz) {
-        DataList<T> dataList = response.as(getDataArrayTypeRef(DataList.class, clazz));
+        GenericDataList<T> dataList = response.as(getDataArrayTypeRef(GenericDataList.class, clazz));
         return dataList.getData();
     }
 
-    static <Td, Tc, Tr> TypeRef<Tr> getDataTypeRef(Class<Td> dataClass, Class<Tc> childClass) {
+    static <T, C, R> TypeRef<R> getDataTypeRef(Class<T> dataClass, Class<C> childClass) {
         return new TypeRef<>() {
             @Override
             public Type getType() {
@@ -29,7 +29,7 @@ public interface ResponseHelper {
         };
     }
 
-    static <Tdl, Tc, Tr> TypeRef<Tr> getDataArrayTypeRef(Class<Tdl> dataListClass, Class<Tc> childClass) {
+    static <T, C, R> TypeRef<R> getDataArrayTypeRef(Class<T> dataListClass, Class<C> childClass) {
         return new TypeRef<>() {
             @Override
             public Type getType() {

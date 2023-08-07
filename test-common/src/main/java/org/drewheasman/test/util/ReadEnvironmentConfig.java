@@ -1,7 +1,7 @@
 package org.drewheasman.test.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.drewheasman.test.config.EnvironmentConfig;
+import org.drewheasman.test.pojo.config.EnvironmentConfig;
 
 import java.io.IOException;
 

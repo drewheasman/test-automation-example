@@ -1,7 +1,7 @@
-package org.drewheasman.test.rest.reqres.response;
+package org.drewheasman.test.rest.reqres.request;
 
 import io.restassured.response.Response;
-import org.drewheasman.test.rest.common.response.ResponseHelper;
+import org.drewheasman.test.rest.common.request.ResponseHelper;
 import org.drewheasman.test.rest.reqres.pojo.reqres.data.ReqresData;
 import org.drewheasman.test.rest.reqres.pojo.reqres.data.ReqresDataList;
 

@@ -8,8 +8,8 @@ import org.drewheasman.test.rest.common.step.RestStepState;
 import org.drewheasman.test.rest.reqres.pojo.reqres.user.User;
 import org.drewheasman.test.rest.reqres.pojo.reqres.user.UserPost;
 import org.drewheasman.test.rest.reqres.pojo.reqres.user.UserUpdatedResponse;
+import org.drewheasman.test.rest.reqres.request.ReqresResponseHelper;
 import org.drewheasman.test.rest.reqres.request.users.UsersRequest;
-import org.drewheasman.test.rest.reqres.response.ReqresResponseHelper;
 import org.junit.Assert;
 
 import java.util.List;

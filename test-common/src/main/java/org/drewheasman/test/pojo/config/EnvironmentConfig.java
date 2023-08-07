@@ -1,4 +1,4 @@
-package org.drewheasman.test.config;
+package org.drewheasman.test.pojo.config;
 
 public interface EnvironmentConfig {
 }

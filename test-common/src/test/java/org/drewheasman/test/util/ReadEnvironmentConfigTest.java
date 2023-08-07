@@ -1,7 +1,7 @@
 package org.drewheasman.test.util;
 
 import lombok.Data;
-import org.drewheasman.test.config.EnvironmentConfig;
+import org.drewheasman.test.pojo.config.EnvironmentConfig;
 import org.junit.Assert;
 import org.junit.Test;
 

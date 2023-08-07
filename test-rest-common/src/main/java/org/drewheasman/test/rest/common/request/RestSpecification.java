@@ -10,6 +10,9 @@ import io.restassured.specification.ResponseSpecification;
 import java.net.URI;
 
 public class RestSpecification {
+    private RestSpecification() {
+    }
+
     public static RequestSpecification requestSpec(URI baseUri) {
         RequestSpecBuilder builder = new RequestSpecBuilder();
 

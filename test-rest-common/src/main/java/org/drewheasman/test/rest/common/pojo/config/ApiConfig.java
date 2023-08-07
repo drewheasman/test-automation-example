@@ -1,7 +1,7 @@
 package org.drewheasman.test.rest.common.pojo.config;
 
 import lombok.Data;
-import org.drewheasman.test.config.EnvironmentConfig;
+import org.drewheasman.test.pojo.config.EnvironmentConfig;
 
 import java.net.URI;
 

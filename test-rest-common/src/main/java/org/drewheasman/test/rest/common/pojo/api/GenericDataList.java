@@ -5,6 +5,6 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class DataList<T> {
+public class GenericDataList<T> {
     private List<T> data;
 }
