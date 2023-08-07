@@ -11,6 +11,9 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class RestHelper {
+    private RestHelper() {
+    }
+
     public static Response request(RestRequestType requestType, URI baseUri, String path) {
         return request(requestType, null, baseUri, path, Map.of(), Map.of(), null);
     }
