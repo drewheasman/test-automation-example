@@ -13,6 +13,7 @@
         <module>test-rest-common</module>
         <module>test-rest-reqres</module>
         <module>test-coverage</module>
+        <module>test-ui-common</module>
     </modules>
 
     <properties>
