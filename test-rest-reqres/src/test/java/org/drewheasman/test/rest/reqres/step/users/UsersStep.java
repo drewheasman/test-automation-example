@@ -16,7 +16,7 @@ import java.util.List;
 
 import static org.drewheasman.test.rest.common.pojo.PojoHelper.defined;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class UsersStep extends RestStep {
 
@@ -79,7 +79,7 @@ public class UsersStep extends RestStep {
     public void returnsUsersList() {
         List<User> userList = ReqresResponseHelper.getDataArrayAs(stepState.getResponse(), User.class);
 
-        assertTrue(userList.size() > 0);
+        assertFalse(userList.isEmpty());
     }
 
     @Then("The endpoint returns a user with id {int}, email {string}, first_name {string}, last_name {string}, avatar {string}")

@@ -16,10 +16,8 @@ import org.openqa.selenium.safari.SafariOptions;
 import org.openqa.selenium.support.PageFactory;
 
 import java.net.URL;
-import java.time.Duration;
 
 public class DriverManager {
-    private final Duration defaultWaitDuration = Duration.ofSeconds(3);
     private WebDriver driver;
 
     public DriverManager(DriverType driverType) {

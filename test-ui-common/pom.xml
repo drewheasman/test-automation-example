@@ -18,12 +18,6 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.drewheasman</groupId>
-            <artifactId>test-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
         </dependency>

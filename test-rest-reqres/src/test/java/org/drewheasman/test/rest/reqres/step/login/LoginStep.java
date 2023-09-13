@@ -9,7 +9,7 @@ import org.drewheasman.test.rest.reqres.pojo.reqres.login.LoginPost;
 import org.drewheasman.test.rest.reqres.pojo.reqres.login.LoginResponse;
 import org.drewheasman.test.rest.reqres.request.login.LoginRequest;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class LoginStep extends RestStep {
     public LoginStep(RestStepState stepState) {
@@ -37,6 +37,6 @@ public class LoginStep extends RestStep {
     public void returnsLoginResponse() {
         LoginResponse loginResponse = stepState.getResponse().as(LoginResponse.class);
 
-        assertTrue(loginResponse.getToken().length() > 0);
+        assertFalse(loginResponse.getToken().isEmpty());
     }
 }
