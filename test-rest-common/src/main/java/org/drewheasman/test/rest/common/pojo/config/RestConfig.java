@@ -6,6 +6,6 @@ import org.drewheasman.test.pojo.config.EnvironmentConfig;
 import java.net.URI;
 
 @Data
-public abstract class ApiConfig implements EnvironmentConfig {
+public abstract class RestConfig implements EnvironmentConfig {
     private URI apiUri;
 }

@@ -5,7 +5,7 @@ import org.drewheasman.test.ui.common.page.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Login extends BasePage {
+public class LoginPage extends BasePage {
     @FindBy(className = "login_logo")
     private WebElement header;
     @FindBy(id = "user-name")
@@ -14,8 +14,12 @@ public class Login extends BasePage {
     private WebElement passwordInput;
     @FindBy(id = "login-button")
     private WebElement loginButton;
+    @FindBy(xpath = "//h3[@data-test='error']")
+    private WebElement error;
+    @FindBy(className = "error-button")
+    private WebElement errorButton;
 
-    protected Login(DriverManager driverManager) {
+    public LoginPage(DriverManager driverManager) {
         super(driverManager);
     }
 
@@ -27,7 +31,7 @@ public class Login extends BasePage {
         return header.getText();
     }
 
-    public boolean checkUsernameVisibility() {
+    public Boolean checkUsernameVisibility() {
         return usernameInput.isDisplayed();
     }
 
@@ -35,25 +39,57 @@ public class Login extends BasePage {
         return usernameInput.getAttribute("placeholder");
     }
 
-    public boolean checkPasswordVisibility() {
+    public Boolean checkUsernameEnabled() {
+        return usernameInput.isEnabled();
+    }
+
+    public Boolean checkPasswordVisibility() {
         return passwordInput.isDisplayed();
     }
 
-    public String getPassowrdPlaceholder() {
+    public Boolean checkPasswordEnabled() {
+        return passwordInput.isEnabled();
+    }
+
+    public String getPasswordPlaceholder() {
         return passwordInput.getAttribute("placeholder");
     }
 
-    public boolean checkLoginVisibility() {
+    public Boolean checkLoginButtonVisibility() {
         return loginButton.isDisplayed();
     }
 
     public String getLoginButtonText() {
-        return loginButton.getText();
+        return loginButton.getAttribute("value");
+    }
+
+    public Boolean checkLoginButtonEnabled() {
+        return loginButton.isEnabled();
+    }
+
+    public Boolean checkErrorVisibility() {
+        return error.isDisplayed();
+    }
+
+    public Boolean checkErrorButtonVisibility() {
+        return errorButton.isDisplayed();
+    }
+
+    public Boolean checkErrorButtonEnabled() {
+        return errorButton.isEnabled();
+    }
+
+    public void clickErrorButton() {
+        errorButton.click();
     }
 
     public void submitUsernamePassword(String username, String password) {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginButton.click();
+    }
+
+    public String getErrorText() {
+        return error.getText();
     }
 }
