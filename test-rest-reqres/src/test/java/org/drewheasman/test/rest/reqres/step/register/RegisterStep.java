@@ -9,6 +9,7 @@ import org.drewheasman.test.rest.reqres.pojo.reqres.register.RegisterResponse;
 import org.drewheasman.test.rest.reqres.request.register.RegisterRequest;
 
 import static org.drewheasman.test.rest.common.pojo.PojoHelper.defined;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class RegisterStep extends RestStep {
@@ -38,6 +39,6 @@ public class RegisterStep extends RestStep {
         RegisterResponse registerResponse = stepState.getResponse().as(RegisterResponse.class);
 
         assertTrue(registerResponse.getId() > 0);
-        assertTrue(registerResponse.getToken().length() > 0);
+        assertFalse(registerResponse.getToken().isEmpty());
     }
 }

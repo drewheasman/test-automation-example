@@ -29,7 +29,7 @@ public class IsoDateTimeDeserializerTest {
     }
 
     @Test
-    public void deserializeInvalidZonedDateTime() throws JsonProcessingException {
+    public void deserializeInvalidZonedDateTime() {
         String dateString = "2023-08-07T12:34:56+01:00";
 
         ObjectMapper objectMapper = new ObjectMapper();

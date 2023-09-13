@@ -15,7 +15,7 @@ import java.util.List;
 
 import static org.drewheasman.test.rest.common.pojo.PojoHelper.defined;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class ResourceStep extends RestStep {
 
@@ -78,7 +78,7 @@ public class ResourceStep extends RestStep {
     public void returnsResourceList() {
         List<UnknownResource> resourceList = ReqresResponseHelper.getDataArrayAs(stepState.getResponse(), UnknownResource.class);
 
-        assertTrue(resourceList.size() > 0);
+        assertFalse(resourceList.isEmpty());
     }
 
     @Then("The endpoint returns resource data with id {string}, name {string}, year {int}, color {string}, pantone_value {string}")
