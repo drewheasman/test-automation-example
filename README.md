@@ -5,8 +5,8 @@
 ### Library modules
 
 * **test-common** - Base test classes and utilities. Pulls in JUnit and Cucumber
-* **test-rest** - Base API testing classes and utilities. Pulls in REST Assured
-* **test-ui** - Base UI testing classes and utilities. Pulls in Selenium WebDriver
+* **test-rest-common** - Base API testing classes and utilities. Pulls in REST Assured
+* **test-ui-common** - Base UI testing classes and utilities. Pulls in Selenium WebDriver
 
 ### Example feature modules
 
